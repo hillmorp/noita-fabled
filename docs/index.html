@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noita: Fabled</title>
+<meta name="description" content="Noita: Fabled is a large content mod for Noita: new spells, perks, alchemy, relics and world events. Browse everything it adds as one tree.">
+<meta name="theme-color" content="#070912">
+<link rel="icon" type="image/png" href="assets/icons/fa_comet.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&amp;family=Handjet:wght@400..900&amp;family=Jacquard+24&amp;family=Monomakh&amp;display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<a class="skip" href="#_tree" data-i18n="skip">Skip to the tree</a>
+
+<!-- page anchors start with "_" so they can never collide with a node id of the tree (those are #hashes too) -->
+<header class="top" id="_top">
+  <a class="top__mark" href="#_top" aria-label="Noita: Fabled">Noita: Fabled</a>
+  <nav class="top__nav" aria-label="Main">
+    <a class="top__link" href="#_tree" data-i18n="nav.tree">Tree</a>
+    <div class="lang" role="group" data-i18n-aria="lang.label" aria-label="Language">
+      <button type="button" class="lang__btn" data-lang="en" lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="lang__btn" data-lang="ru" lang="ru" aria-pressed="false">RU</button>
+    </div>
+    <!-- STUB: the download link is not known yet, see _progress_design.md -->
+    <a class="btn" href="#" data-stub="download" data-i18n="nav.download">Download</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__scene" aria-hidden="true">
+    <!-- static cave drawn by js/hero.js; it is also what shows until the video is ready -->
+    <canvas class="hero__rock"></canvas>
+    <!-- gameplay video slot: js/main.js points it at assets/hero.mp4 and fades it in if the file exists -->
+    <video class="hero__video" muted loop playsinline preload="none" data-src="assets/hero.mp4"></video>
+    <div class="hero__glow"></div>
+    <canvas class="hero__sand"></canvas>
+    <div class="hero__shade"></div>
+  </div>
+
+  <div class="hero__center">
+    <h1 class="hero__title" id="hero-title">
+      <picture>
+        <source media="(min-width: 640px)" srcset="assets/fa_logo_big.png" width="556" height="168">
+        <img class="hero__logo" src="assets/fa_logo.png" width="278" height="84" alt="Noita: Fabled">
+      </picture>
+    </h1>
+    <p class="hero__tag" data-i18n="hero.tag">A big content mod for Noita: new spells, perks, alchemy, relics and things to find in the dark.</p>
+  </div>
+
+  <a class="hero__cue" href="#_tree">
+    <span data-i18n="hero.cue">Descend</span>
+    <span class="hero__cue-line" aria-hidden="true"></span>
+  </a>
+</section>
+
+<section class="codex" id="_tree" aria-labelledby="codex-title">
+  <div class="codex__inner">
+    <svg class="codex__vein" aria-hidden="true" focusable="false"><path></path></svg>
+
+    <div class="codex__head">
+      <p class="over"><span data-i18n="codex.over">Codex</span> <span class="over__ver" id="ver-head"></span></p>
+      <h2 class="codex__title" id="codex-title" data-i18n="codex.title">The whole mod, branch by branch</h2>
+      <p class="codex__lead" data-i18n="codex.lead">Open a branch to see what grows on it. Every leaf is one thing the mod adds, with its numbers.</p>
+
+      <div class="codex__tools">
+        <label class="search">
+          <span class="sr" data-i18n="search.label">Search the tree</span>
+          <svg class="search__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 2h6v2h2v6h-2v2H4v-2H2V4h2zM4 4v6h6V4zM11 11h2v2h2v2h-2v-2h-2z" fill="currentColor" fill-rule="evenodd"/></svg>
+          <input class="search__input" id="q" type="search" autocomplete="off" spellcheck="false" data-i18n-placeholder="search.placeholder" placeholder="Search: comet, mana, relic">
+          <kbd class="search__key" aria-hidden="true">/</kbd>
+        </label>
+        <div class="codex__actions">
+          <button type="button" class="link" id="expand-all" data-i18n="btn.expand">Expand all</button>
+          <button type="button" class="link" id="collapse-all" data-i18n="btn.collapse">Collapse</button>
+        </div>
+      </div>
+
+      <div class="kinds" id="kinds" role="group" data-i18n-aria="kinds.label" aria-label="Filter by kind"></div>
+      <p class="codex__status" id="status" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="codex__body">
+      <div class="tree" id="tree" role="tree" aria-labelledby="codex-title">
+        <svg class="tree__links" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="heat" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="600">
+              <stop offset="0" stop-color="#ffd467"/>
+              <stop offset="0.45" stop-color="#ff8b5e"/>
+              <stop offset="1" stop-color="#e65856"/>
+            </linearGradient>
+          </defs>
+          <g class="tree__paths"></g>
+        </svg>
+        <div class="tree__nodes" role="presentation"></div>
+      </div>
+
+      <aside class="card" id="card" data-i18n-aria="card.label" aria-label="Entry"></aside>
+    </div>
+
+    <noscript><p class="noscript">The tree needs JavaScript. / Дереву нужен JavaScript.</p></noscript>
+  </div>
+</section>
+
+</main>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <p class="foot__mark">Noita: Fabled <span id="ver-foot"></span></p>
+    <p class="foot__note" data-i18n="foot.note">A fan-made mod for Noita, not affiliated with Nolla Games.</p>
+    <p class="foot__links">
+      <a href="#" data-stub="download" data-i18n="nav.download">Download</a>
+      <a href="#_top" data-i18n="foot.top">Back to the surface</a>
+    </p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Real data (written by the data build; may be absent), then the sample that only fills in when it is. -->
+<script src="data/tree.js"></script>
+<script src="data/tree.sample.js"></script>
+<script src="js/logo-mask.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/codex.js"></script>
+<script src="js/pixeltext.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
