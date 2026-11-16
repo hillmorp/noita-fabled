@@ -5637,7 +5637,7 @@ window.FABLED_TREE = {
        "en": "Carried: tinctures last 50 % longer",
        "ru": "С собой: настойки действуют на 50 % дольше"
       },
-      "icon": "assets/icons/relics_charm_ui.png",
+      "icon": "assets/icons/charm_ui.png",
       "stats": [
        {
         "key": "duration",
@@ -6205,14 +6205,14 @@ window.FABLED_TREE = {
        "ru": "Знамения"
       },
       "summary": {
-       "en": "Twelve omen cards. Hold one and click: it does its job at once and the card is gone. A throw or a kick only moves it. Sources: elite death (10%), the world (about 1 per 12 screens), caches, the wanderer, the hunt board and champions.",
-       "ru": "Двенадцать карт-знамений."
+       "en": "Four omen cards, kept for a hard fight: Renewal, Stasis, Wrath and the Shell.",
+       "ru": "Четыре карты-знамения, которые берегут для тяжёлого боя: Обновление, Стазис, Гнев и Панцирь."
       },
-      "icon": "assets/icons/reveal_ui.png",
+      "icon": "assets/icons/stasis_ui.png",
       "stats": [],
       "body": {
-       "en": "Twelve omen cards. Hold one and click: it does its job at once and the card is gone. A throw or a kick only moves it. Sources: elite death (10%), the world (about 1 per 12 screens), caches, the wanderer, the hunt board and champions. The draw weight is 3 for every card except Plenty (1).",
-       "ru": "Двенадцать карт-знамений. Возьмите карту в руку и кликните: она сразу делает своё дело, и карта исчезает. Бросок или пинок её только сдвигают. Источники: смерть элиты (10%), мир (около 1 на 12 экранов), тайники, странник, доска охоты и чемпионы. Вес выпадения 3 у каждой карты, кроме «Изобилия» (1)."
+       "en": "Four omen cards, kept for a hard fight: Renewal, Stasis, Wrath and the Shell. Hold one and click: it does its job at once and the card is gone. A throw or a kick only moves it. They are rare: elite death (4%), the world (about 1 per 60 screens), caches, the wanderer, the hunt board and champions. All four are drawn equally often.",
+       "ru": "Четыре карты-знамения, которые берегут для тяжёлого боя: Обновление, Стазис, Гнев и Панцирь. Возьмите карту в руку и кликните: она сразу делает своё дело, и карта исчезает. Бросок или пинок её только сдвигают. Встречаются редко: смерть элиты (4%), мир (около 1 на 60 экранов), тайники, странник, доска охоты и чемпионы. Все четыре выпадают одинаково часто."
       },
       "recipe": null,
       "reactions": null,
@@ -6220,68 +6220,6 @@ window.FABLED_TREE = {
        "omen"
       ],
       "children": [
-       {
-        "id": "world.omens.mending",
-        "kind": "omen",
-        "title": {
-         "en": "Omen of Mending",
-         "ru": "Знамение исцеления"
-        },
-        "summary": {
-         "en": "Heals 30 % of your maximum health",
-         "ru": "Лечит 30 % максимума здоровья"
-        },
-        "icon": "assets/icons/mending_ui.png",
-        "stats": [
-         {
-          "key": "heal",
-          "label": {
-           "en": "Healing, % of max health",
-           "ru": "Лечение, % максимума здоровья"
-          },
-          "value": "30",
-          "vanilla": null
-         },
-         {
-          "key": "weight",
-          "label": {
-           "en": "Draw weight",
-           "ru": "Вес при выпадении"
-          },
-          "value": "3",
-          "vanilla": null
-         },
-         {
-          "key": "drop",
-          "label": {
-           "en": "Drop chance from an elite, %",
-           "ru": "Шанс выпадения из элиты, %"
-          },
-          "value": "10",
-          "vanilla": null
-         },
-         {
-          "key": "find",
-          "label": {
-           "en": "World finds per screen",
-           "ru": "Находок в мире на экран"
-          },
-          "value": "1/12",
-          "vanilla": null
-         }
-        ],
-        "body": {
-         "en": "Heals 30 % of your maximum health at once. One use: hold it and click.",
-         "ru": "Сразу лечит 30 % максимума здоровья. Одно использование: возьмите в руку и кликните."
-        },
-        "recipe": null,
-        "reactions": null,
-        "tags": [
-         "omen",
-         "card"
-        ],
-        "children": []
-       },
        {
         "id": "world.omens.refill",
         "kind": "omen",
@@ -6301,7 +6239,7 @@ window.FABLED_TREE = {
            "en": "Draw weight",
            "ru": "Вес при выпадении"
           },
-          "value": "3",
+          "value": "1",
           "vanilla": null
          },
          {
@@ -6310,7 +6248,7 @@ window.FABLED_TREE = {
            "en": "Drop chance from an elite, %",
            "ru": "Шанс выпадения из элиты, %"
           },
-          "value": "10",
+          "value": "4",
           "vanilla": null
          },
          {
@@ -6319,84 +6257,13 @@ window.FABLED_TREE = {
            "en": "World finds per screen",
            "ru": "Находок в мире на экран"
           },
-          "value": "1/12",
+          "value": "1/60",
           "vanilla": null
          }
         ],
         "body": {
          "en": "Every limited-use spell in your wand gets all its uses back. One use: hold it and click.",
          "ru": "Все заклинания с ограниченным числом применений в палочке снова полны. Одно использование: возьмите в руку и кликните."
-        },
-        "recipe": null,
-        "reactions": null,
-        "tags": [
-         "omen",
-         "card"
-        ],
-        "children": []
-       },
-       {
-        "id": "world.omens.bounty",
-        "kind": "omen",
-        "title": {
-         "en": "Omen of Bounty",
-         "ru": "Знамение щедрости"
-        },
-        "summary": {
-         "en": "Gold: 10 % of your wallet, from 30 to 300",
-         "ru": "Золото: 10 % кошелька, от 30 до 300"
-        },
-        "icon": "assets/icons/bounty_ui.png",
-        "stats": [
-         {
-          "key": "share",
-          "label": {
-           "en": "Gold: share of the wallet, %",
-           "ru": "Золото: доля кошелька, %"
-          },
-          "value": "10",
-          "vanilla": null
-         },
-         {
-          "key": "range",
-          "label": {
-           "en": "Gold at least / at most",
-           "ru": "Золота не меньше / не больше"
-          },
-          "value": "30 / 300",
-          "vanilla": null
-         },
-         {
-          "key": "weight",
-          "label": {
-           "en": "Draw weight",
-           "ru": "Вес при выпадении"
-          },
-          "value": "3",
-          "vanilla": null
-         },
-         {
-          "key": "drop",
-          "label": {
-           "en": "Drop chance from an elite, %",
-           "ru": "Шанс выпадения из элиты, %"
-          },
-          "value": "10",
-          "vanilla": null
-         },
-         {
-          "key": "find",
-          "label": {
-           "en": "World finds per screen",
-           "ru": "Находок в мире на экран"
-          },
-          "value": "1/12",
-          "vanilla": null
-         }
-        ],
-        "body": {
-         "en": "Gold worth 10 % of your wallet (30 to 300) appears at your feet. One use: hold it and click.",
-         "ru": "Золото на 10 % вашего кошелька (от 30 до 300) падает вам под ноги. Одно использование: возьмите в руку и кликните."
         },
         "recipe": null,
         "reactions": null,
@@ -6443,7 +6310,7 @@ window.FABLED_TREE = {
            "en": "Draw weight",
            "ru": "Вес при выпадении"
           },
-          "value": "3",
+          "value": "1",
           "vanilla": null
          },
          {
@@ -6452,7 +6319,7 @@ window.FABLED_TREE = {
            "en": "Drop chance from an elite, %",
            "ru": "Шанс выпадения из элиты, %"
           },
-          "value": "10",
+          "value": "4",
           "vanilla": null
          },
          {
@@ -6461,146 +6328,13 @@ window.FABLED_TREE = {
            "en": "World finds per screen",
            "ru": "Находок в мире на экран"
           },
-          "value": "1/12",
+          "value": "1/60",
           "vanilla": null
          }
         ],
         "body": {
          "en": "Every enemy within 250 px is frozen for 6 s (not bosses). One use: hold it and click.",
          "ru": "Каждый враг в радиусе 250 пикселей замерзает на 6 с (кроме боссов). Одно использование: возьмите в руку и кликните."
-        },
-        "recipe": null,
-        "reactions": null,
-        "tags": [
-         "omen",
-         "card"
-        ],
-        "children": []
-       },
-       {
-        "id": "world.omens.blink",
-        "kind": "omen",
-        "title": {
-         "en": "Omen of the Step",
-         "ru": "Знамение шага"
-        },
-        "summary": {
-         "en": "Teleports you toward the aim, up to 250 px",
-         "ru": "Переносит к цели, не дальше 250 пикс."
-        },
-        "icon": "assets/icons/blink_ui.png",
-        "stats": [
-         {
-          "key": "range",
-          "label": {
-           "en": "Range, px",
-           "ru": "Дальность, px"
-          },
-          "value": "250",
-          "vanilla": null
-         },
-         {
-          "key": "weight",
-          "label": {
-           "en": "Draw weight",
-           "ru": "Вес при выпадении"
-          },
-          "value": "3",
-          "vanilla": null
-         },
-         {
-          "key": "drop",
-          "label": {
-           "en": "Drop chance from an elite, %",
-           "ru": "Шанс выпадения из элиты, %"
-          },
-          "value": "10",
-          "vanilla": null
-         },
-         {
-          "key": "find",
-          "label": {
-           "en": "World finds per screen",
-           "ru": "Находок в мире на экран"
-          },
-          "value": "1/12",
-          "vanilla": null
-         }
-        ],
-        "body": {
-         "en": "Teleports you toward the aim point, up to 250 px, only into free space. One use: hold it and click.",
-         "ru": "Переносит вас к точке прицела, не дальше 250 пикселей и только в свободное место. Одно использование: возьмите в руку и кликните."
-        },
-        "recipe": null,
-        "reactions": null,
-        "tags": [
-         "omen",
-         "card"
-        ],
-        "children": []
-       },
-       {
-        "id": "world.omens.reveal",
-        "kind": "omen",
-        "title": {
-         "en": "Omen of Sight",
-         "ru": "Знамение зрения"
-        },
-        "summary": {
-         "en": "Clears the fog of war within 600 px for 30 s",
-         "ru": "Рассеивает туман в 600 пикс. на 30 с"
-        },
-        "icon": "assets/icons/reveal_ui.png",
-        "stats": [
-         {
-          "key": "radius",
-          "label": {
-           "en": "Radius, px",
-           "ru": "Радиус, px"
-          },
-          "value": "600",
-          "vanilla": null
-         },
-         {
-          "key": "duration",
-          "label": {
-           "en": "Duration, s",
-           "ru": "Длительность, с"
-          },
-          "value": "30",
-          "vanilla": null
-         },
-         {
-          "key": "weight",
-          "label": {
-           "en": "Draw weight",
-           "ru": "Вес при выпадении"
-          },
-          "value": "3",
-          "vanilla": null
-         },
-         {
-          "key": "drop",
-          "label": {
-           "en": "Drop chance from an elite, %",
-           "ru": "Шанс выпадения из элиты, %"
-          },
-          "value": "10",
-          "vanilla": null
-         },
-         {
-          "key": "find",
-          "label": {
-           "en": "World finds per screen",
-           "ru": "Находок в мире на экран"
-          },
-          "value": "1/12",
-          "vanilla": null
-         }
-        ],
-        "body": {
-         "en": "Clears the fog of war within 600 px for 30 s. One use: hold it and click.",
-         "ru": "Рассеивает туман войны в радиусе 600 пикселей на 30 с. Одно использование: возьмите в руку и кликните."
         },
         "recipe": null,
         "reactions": null,
@@ -6656,7 +6390,7 @@ window.FABLED_TREE = {
            "en": "Draw weight",
            "ru": "Вес при выпадении"
           },
-          "value": "3",
+          "value": "1",
           "vanilla": null
          },
          {
@@ -6665,7 +6399,7 @@ window.FABLED_TREE = {
            "en": "Drop chance from an elite, %",
            "ru": "Шанс выпадения из элиты, %"
           },
-          "value": "10",
+          "value": "4",
           "vanilla": null
          },
          {
@@ -6674,7 +6408,7 @@ window.FABLED_TREE = {
            "en": "World finds per screen",
            "ru": "Находок в мире на экран"
           },
-          "value": "1/12",
+          "value": "1/60",
           "vanilla": null
          }
         ],
@@ -6718,130 +6452,6 @@ window.FABLED_TREE = {
            "en": "Draw weight",
            "ru": "Вес при выпадении"
           },
-          "value": "3",
-          "vanilla": null
-         },
-         {
-          "key": "drop",
-          "label": {
-           "en": "Drop chance from an elite, %",
-           "ru": "Шанс выпадения из элиты, %"
-          },
-          "value": "10",
-          "vanilla": null
-         },
-         {
-          "key": "find",
-          "label": {
-           "en": "World finds per screen",
-           "ru": "Находок в мире на экран"
-          },
-          "value": "1/12",
-          "vanilla": null
-         }
-        ],
-        "body": {
-         "en": "You take no damage for 5 s. One use: hold it and click.",
-         "ru": "Вы не получаете урона 5 с. Одно использование: возьмите в руку и кликните."
-        },
-        "recipe": null,
-        "reactions": null,
-        "tags": [
-         "omen",
-         "card"
-        ],
-        "children": []
-       },
-       {
-        "id": "world.omens.surge",
-        "kind": "omen",
-        "title": {
-         "en": "Omen of the Surge",
-         "ru": "Знамение прилива"
-        },
-        "summary": {
-         "en": "The wand's mana stays full for 12 s",
-         "ru": "Мана палочки полная 12 с"
-        },
-        "icon": "assets/icons/surge_ui.png",
-        "stats": [
-         {
-          "key": "duration",
-          "label": {
-           "en": "Duration, s",
-           "ru": "Длительность, с"
-          },
-          "value": "12",
-          "vanilla": null
-         },
-         {
-          "key": "weight",
-          "label": {
-           "en": "Draw weight",
-           "ru": "Вес при выпадении"
-          },
-          "value": "3",
-          "vanilla": null
-         },
-         {
-          "key": "drop",
-          "label": {
-           "en": "Drop chance from an elite, %",
-           "ru": "Шанс выпадения из элиты, %"
-          },
-          "value": "10",
-          "vanilla": null
-         },
-         {
-          "key": "find",
-          "label": {
-           "en": "World finds per screen",
-           "ru": "Находок в мире на экран"
-          },
-          "value": "1/12",
-          "vanilla": null
-         }
-        ],
-        "body": {
-         "en": "The mana of your wand is full and stays full for 12 s. One use: hold it and click.",
-         "ru": "Мана палочки полная и остаётся полной 12 с. Одно использование: возьмите в руку и кликните."
-        },
-        "recipe": null,
-        "reactions": null,
-        "tags": [
-         "omen",
-         "card"
-        ],
-        "children": []
-       },
-       {
-        "id": "world.omens.feast",
-        "kind": "omen",
-        "title": {
-         "en": "Omen of Plenty",
-         "ru": "Знамение изобилия"
-        },
-        "summary": {
-         "en": "Maximum health +10 for good",
-         "ru": "Максимум здоровья +10 навсегда"
-        },
-        "icon": "assets/icons/feast_ui.png",
-        "stats": [
-         {
-          "key": "hp",
-          "label": {
-           "en": "Max health, for good",
-           "ru": "Максимум здоровья, навсегда"
-          },
-          "value": "+10",
-          "vanilla": null
-         },
-         {
-          "key": "weight",
-          "label": {
-           "en": "Draw weight",
-           "ru": "Вес при выпадении"
-          },
           "value": "1",
           "vanilla": null
          },
@@ -6851,7 +6461,7 @@ window.FABLED_TREE = {
            "en": "Drop chance from an elite, %",
            "ru": "Шанс выпадения из элиты, %"
           },
-          "value": "10",
+          "value": "4",
           "vanilla": null
          },
          {
@@ -6860,146 +6470,13 @@ window.FABLED_TREE = {
            "en": "World finds per screen",
            "ru": "Находок в мире на экран"
           },
-          "value": "1/12",
+          "value": "1/60",
           "vanilla": null
          }
         ],
         "body": {
-         "en": "Maximum health +10 for good, and 10 health at once. One use: hold it and click.",
-         "ru": "Максимум здоровья +10 навсегда и сразу +10 здоровья. Одно использование: возьмите в руку и кликните."
-        },
-        "recipe": null,
-        "reactions": null,
-        "tags": [
-         "omen",
-         "card"
-        ],
-        "children": []
-       },
-       {
-        "id": "world.omens.charm",
-        "kind": "omen",
-        "title": {
-         "en": "Omen of the Friend",
-         "ru": "Знамение друга"
-        },
-        "summary": {
-         "en": "Charms the nearest enemy within 200 px for 60 s",
-         "ru": "Подчиняет ближайшего врага в 200 пикс. на 60 с"
-        },
-        "icon": "assets/icons/omens_charm_ui.png",
-        "stats": [
-         {
-          "key": "radius",
-          "label": {
-           "en": "Radius, px",
-           "ru": "Радиус, px"
-          },
-          "value": "200",
-          "vanilla": null
-         },
-         {
-          "key": "duration",
-          "label": {
-           "en": "Duration, s",
-           "ru": "Длительность, с"
-          },
-          "value": "60",
-          "vanilla": null
-         },
-         {
-          "key": "weight",
-          "label": {
-           "en": "Draw weight",
-           "ru": "Вес при выпадении"
-          },
-          "value": "3",
-          "vanilla": null
-         },
-         {
-          "key": "drop",
-          "label": {
-           "en": "Drop chance from an elite, %",
-           "ru": "Шанс выпадения из элиты, %"
-          },
-          "value": "10",
-          "vanilla": null
-         },
-         {
-          "key": "find",
-          "label": {
-           "en": "World finds per screen",
-           "ru": "Находок в мире на экран"
-          },
-          "value": "1/12",
-          "vanilla": null
-         }
-        ],
-        "body": {
-         "en": "The nearest enemy within 200 px is charmed for 60 s (not bosses). One use: hold it and click.",
-         "ru": "Ближайший враг в радиусе 200 пикселей очарован на 60 с (кроме боссов). Одно использование: возьмите в руку и кликните."
-        },
-        "recipe": null,
-        "reactions": null,
-        "tags": [
-         "omen",
-         "card"
-        ],
-        "children": []
-       },
-       {
-        "id": "world.omens.dig",
-        "kind": "omen",
-        "title": {
-         "en": "Omen of the Mole",
-         "ru": "Знамение крота"
-        },
-        "summary": {
-         "en": "Clears soft ground within 45 px",
-         "ru": "Убирает мягкую землю в 45 пикс."
-        },
-        "icon": "assets/icons/dig_ui.png",
-        "stats": [
-         {
-          "key": "radius",
-          "label": {
-           "en": "Radius, px",
-           "ru": "Радиус, px"
-          },
-          "value": "45",
-          "vanilla": null
-         },
-         {
-          "key": "weight",
-          "label": {
-           "en": "Draw weight",
-           "ru": "Вес при выпадении"
-          },
-          "value": "3",
-          "vanilla": null
-         },
-         {
-          "key": "drop",
-          "label": {
-           "en": "Drop chance from an elite, %",
-           "ru": "Шанс выпадения из элиты, %"
-          },
-          "value": "10",
-          "vanilla": null
-         },
-         {
-          "key": "find",
-          "label": {
-           "en": "World finds per screen",
-           "ru": "Находок в мире на экран"
-          },
-          "value": "1/12",
-          "vanilla": null
-         }
-        ],
-        "body": {
-         "en": "Removes the soft ground within 45 px of you; hard rock stays. One use: hold it and click.",
-         "ru": "Убирает мягкую землю в радиусе 45 пикселей вокруг вас; твёрдая порода остаётся. Одно использование: возьмите в руку и кликните."
+         "en": "You take no damage for 5 s. One use: hold it and click.",
+         "ru": "Вы не получаете урона 5 с. Одно использование: возьмите в руку и кликните."
         },
         "recipe": null,
         "reactions": null,
@@ -7374,8 +6851,8 @@ window.FABLED_TREE = {
          }
         ],
         "body": {
-         "en": "Every 30 frames the mod looks at the enemies within 600 px of you (at most 40 per look). Each enemy gets ONE roll in its life: 4% (times the setting `elite_rate`, the Hunting grounds biome and a running hunt). Bosses, worms, dragons, ghosts, charmed or very weak enemies and the player's own herd are not eligible.\n\nAn elite has health ×1.5 and ONE of 9 affixes with equal chance. When you kill it: the total gold is 3× what a normal enemy of the same base health drops (if that enemy had vanilla gold), and a 25% chance of a spell card of the mod, fitting the depth. It may also drop a relic (6%), an omen (10%) or a wisp egg (3%).",
-         "ru": "Каждые 30 кадров мод смотрит на врагов в 600 px от вас (не больше 40 за раз). Каждый враг за свою жизнь получает ОДИН бросок: 4% (умноженные на настройку `elite_rate`, биом «Охотничьи угодья» и идущую охоту). Не подходят боссы, черви, драконы, призраки, очарованные и очень слабые враги, а также свои для игрока.\n\nУ элитного врага здоровье ×1.5 и ОДНО из 9 свойств с равным шансом. Если вы его убили: суммарное золото в 3 раза больше, чем у обычного врага с тем же базовым здоровьем (если у того было ванильное золото), и шанс 25% на карту заклинания мода по глубине. Также может выпасть реликвия (6%), знамение (10%) или яйцо огонька (3%)."
+         "en": "Every 30 frames the mod looks at the enemies within 600 px of you (at most 40 per look). Each enemy gets ONE roll in its life: 4% (times the setting `elite_rate`, the Hunting grounds biome and a running hunt). Bosses, worms, dragons, ghosts, charmed or very weak enemies and the player's own herd are not eligible.\n\nAn elite has health ×1.5 and ONE of 9 affixes with equal chance. When you kill it: the total gold is 3× what a normal enemy of the same base health drops (if that enemy had vanilla gold), and a 25% chance of a spell card of the mod, fitting the depth. It may also drop a relic (6%), an omen (4%) or a wisp egg (3%).",
+         "ru": "Каждые 30 кадров мод смотрит на врагов в 600 px от вас (не больше 40 за раз). Каждый враг за свою жизнь получает ОДИН бросок: 4% (умноженные на настройку `elite_rate`, биом «Охотничьи угодья» и идущую охоту). Не подходят боссы, черви, драконы, призраки, очарованные и очень слабые враги, а также свои для игрока.\n\nУ элитного врага здоровье ×1.5 и ОДНО из 9 свойств с равным шансом. Если вы его убили: суммарное золото в 3 раза больше, чем у обычного врага с тем же базовым здоровьем (если у того было ванильное золото), и шанс 25% на карту заклинания мода по глубине. Также может выпасть реликвия (6%), знамение (4%) или яйцо огонька (3%)."
         },
         "recipe": null,
         "reactions": null,
